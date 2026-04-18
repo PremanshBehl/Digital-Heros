@@ -5,8 +5,8 @@ import { NextResponse } from "next/server"
 
 // Use service role key to bypass RLS for webhook updates
 const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://dummy.supabase.co',
+  process.env.SUPABASE_SERVICE_ROLE_KEY || 'dummy_key'
 )
 
 export async function POST(req: Request) {
