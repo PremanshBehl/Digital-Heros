@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     case "checkout.session.completed":
     case "customer.subscription.created":
     case "customer.subscription.updated":
-      const subscription = await stripe.subscriptions.retrieve(session.subscription || session.id)
+      const subscription: any = await stripe.subscriptions.retrieve(session.subscription || session.id)
       
       const { error: upsertError } = await supabaseAdmin.from("subscriptions").upsert({
         user_id: session.metadata?.userId || (await getUserByStripeId(subscription.customer as string)),

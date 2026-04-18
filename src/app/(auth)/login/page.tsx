@@ -68,7 +68,7 @@ export default function LoginPage() {
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium">Password</label>
-                <Link href="/reset-password" size="sm" className="text-xs text-primary hover:underline">
+                <Link href="/reset-password" className="text-xs text-primary hover:underline">
                   Forgot password?
                 </Link>
               </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+import { Button, cn } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Ticket, Play, Eye, CheckCircle2, Loader2, AlertTriangle } from "lucide-react"
 import { createClient } from "@/utils/supabase/client"
